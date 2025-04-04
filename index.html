@@ -4,74 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jinson's Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #4f46e5;
+      background: #6c63ff;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
     }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto;
+      max-width: 700px;
+      border-radius: 12px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 1rem;
+    }
+
     .post {
       background: white;
+      margin: 1.5rem 0;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s;
+      animation: slideUp 0.8s ease forwards;
     }
+
+    .post:hover {
+      transform: scale(1.01);
+    }
+
     .post h2 {
       margin-top: 0;
-      color: #4f46e5;
     }
-    .post p {
-      line-height: 1.6;
+
+    .post img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
     }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 2rem;
+      background: #f1f1f1;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Jinson's Blog</h1>
     <p>Thoughts. Tutorials. Code.</p>
   </header>
+
+  <section class="profile">
+    <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="Jinson's Profile Picture">
+    <h2>Hey, I'm Jinson 👋</h2>
+    <p>I write about web development, life, and my learning journey. Welcome to my personal space on the web!</p>
+  </section>
+
   <div class="container">
     <div class="post">
       <h2>🚀 Welcome to My New Blog</h2>
-      <p>
-        This is where I’ll be sharing coding tutorials, tech tips, and personal notes as I grow as a developer. Stay tuned for more!
-      </p>
+      <p>This is my new personal blog site. I’ll be posting updates, tutorials, and thoughts here.</p>
+      <img src="https://source.unsplash.com/800x400/?technology,blog" alt="Blogging Image">
     </div>
+
     <div class="post">
-      <h2>💡 Why I’m Not Using WordPress</h2>
-      <p>
-        I wanted full control and simplicity. No plugins, no bloat — just clean HTML, CSS, and a bit of love.
-      </p>
+      <h2>📚 Learning by Doing</h2>
+      <p>Building this blog from scratch helped me understand web development better. More hands-on content coming soon!</p>
+      <img src="https://source.unsplash.com/800x400/?coding,programming" alt="Coding Image">
     </div>
   </div>
+
   <footer>
     &copy; 2025 Jinson John. All rights reserved.
   </footer>
+
 </body>
 </html>
 
